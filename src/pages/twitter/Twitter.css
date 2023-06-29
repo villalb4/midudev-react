@@ -6,7 +6,6 @@
   background-color: rgb(35, 43, 40);
 }
 .tw__container {
-  background-color: red;
   display: flex;
   flex-direction: column;
   gap: 20px;

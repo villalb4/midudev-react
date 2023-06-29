@@ -10,6 +10,7 @@ const Card: React.FC<CardProps> = ({ user }) => {
   const [isFollowing, setIsFollowing] = React.useState<boolean>(false);
 
   const buttonText = isFollowing ? 'Siguiendo' : 'Seguir';
+  const buttonClassName = isFollowing ? 'twButton active' : 'twButton';
 
   const handleFollow = () => {
     setIsFollowing(!isFollowing);
@@ -27,8 +28,11 @@ const Card: React.FC<CardProps> = ({ user }) => {
         </div>
       </div>
       <div className="twCard__secondChild">
-        <button onClick={handleFollow}>
-          <span>{buttonText}</span>
+        <button onClick={handleFollow} className={buttonClassName}>
+          <span className={'twCard__buttonContent'}>{buttonText}</span>
+          <span className={'twCard__buttonContentUnfollow'}>
+            Dejar de seguir
+          </span>
         </button>
       </div>
     </div>

@@ -23,3 +23,39 @@
   display: flex;
   flex-direction: column;
 }
+.twButton {
+  background-color: transparent;
+  border: 1px solid #536471;
+  border-radius: 20px;
+  padding: 0px 16px;
+  min-height: 32px;
+  cursor: pointer;
+}
+.twButton.active {
+  border: 1px solid #536471;
+  border-radius: 20px;
+  padding: 0px 16px;
+  min-height: 32px;
+  cursor: pointer;
+}
+/* al span "Dejar de seguir" , por defecto esta en display none */
+.twCard__buttonContentUnfollow {
+  display: none;
+}
+/* cuando el boton este ".active" osea que este en "siguiendo", si se le hace hover, el span "Dejar de seguir" se va a mostrar */
+.twButton.active:hover .twCard__buttonContentUnfollow {
+  display: block;
+  color: #f4212e;
+}
+.twButton.active:hover {
+  border-color: #67070f;
+  background-color: #f4212e1a;
+}
+
+/* esto es lo mismo que arriba pero ocultando el span "siguiendo" */
+.twButton.active:hover .twCard__buttonContent {
+  display: none;
+}
+.twCard__buttonContent {
+  color: #eff3f4;
+}
