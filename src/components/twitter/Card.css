@@ -1,6 +1,7 @@
 .twCard__component {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 .twCard__firsChild {

@@ -7,5 +7,9 @@
 }
 .tw__container {
   background-color: red;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
 }
