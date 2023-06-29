@@ -7,10 +7,23 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ user }) => {
+  const [isFollowing, setIsFollowing] = React.useState<boolean>(false);
+
+  const buttonText = user.follow ? 'Siguiendo' : 'Seguir';
+
+  const handleFollow = () => {
+    setIsFollowing(!isFollowing);
+  };
+
   return (
     <div>
       <div>
         <span>{user.userName}</span>
+      </div>
+      <div>
+        <button onClick={handleFollow}>
+          <span>{buttonText}</span>
+        </button>
       </div>
     </div>
   );
