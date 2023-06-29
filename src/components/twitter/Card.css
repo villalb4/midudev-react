@@ -1,9 +1,24 @@
+.twCard__component {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.twCard__firsChild {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .twCard__profilePhotoContainer {
   height: 40px;
   width: 40px;
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
-.twCard__profilePhoto {
+.twCard__profilePhotoContainer > img {
   max-width: 40px;
+}
+.twCard__namesContainer {
+  display: flex;
+  flex-direction: column;
 }

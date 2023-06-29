@@ -1,0 +1,11 @@
+.tw__component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(35, 43, 40);
+}
+.tw__container {
+  background-color: red;
+  display: inline-block;
+}

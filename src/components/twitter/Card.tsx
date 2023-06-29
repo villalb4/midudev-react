@@ -17,17 +17,16 @@ const Card: React.FC<CardProps> = ({ user }) => {
 
   return (
     <div className="twCard__component">
-      <div>
+      <div className="twCard__firsChild">
         <div className="twCard__profilePhotoContainer">
-          <img
-            src={user.profilePhoto}
-            alt="profile photo"
-            className="twCard__profilePhoto"
-          />
+          <img src={user.profilePhoto} alt="profile photo" />
         </div>
-        <span>{user.userName}</span>
+        <div className="twCard__namesContainer">
+          <span>{user.name}</span>
+          <span>{user.userName}</span>
+        </div>
       </div>
-      <div>
+      <div className="twCard__secondChild">
         <button onClick={handleFollow}>
           <span>{buttonText}</span>
         </button>
