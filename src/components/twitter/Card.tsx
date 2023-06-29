@@ -9,15 +9,22 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ user }) => {
   const [isFollowing, setIsFollowing] = React.useState<boolean>(false);
 
-  const buttonText = user.follow ? 'Siguiendo' : 'Seguir';
+  const buttonText = isFollowing ? 'Siguiendo' : 'Seguir';
 
   const handleFollow = () => {
     setIsFollowing(!isFollowing);
   };
 
   return (
-    <div>
+    <div className="twCard__component">
       <div>
+        <div className="twCard__profilePhotoContainer">
+          <img
+            src={user.profilePhoto}
+            alt="profile photo"
+            className="twCard__profilePhoto"
+          />
+        </div>
         <span>{user.userName}</span>
       </div>
       <div>

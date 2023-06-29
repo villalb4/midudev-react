@@ -1,0 +1,9 @@
+.twCard__profilePhotoContainer {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.twCard__profilePhoto {
+  max-width: 40px;
+}
