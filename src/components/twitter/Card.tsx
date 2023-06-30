@@ -21,11 +21,13 @@ const Card: React.FC<CardProps> = ({ user }) => {
       {openPreview && <Preview user={user} isOpen={setOpenPreview} />}
       <div className="twCard__firsChild">
         <div
-          className="twCard__profilePhotoContainer"
+          className="twCard__hoverContainer"
           onMouseEnter={() => setOpenPreview(true)}
           onMouseLeave={() => setOpenPreview(false)}
         >
-          <img src={user.profilePhoto} alt="profile photo" />
+          <div className="twCard__profilePhotoContainer">
+            <img src={user.profilePhoto} alt="profile photo" />
+          </div>
         </div>
         <div className="twCard__namesContainer">
           <strong>{user.name}</strong>
