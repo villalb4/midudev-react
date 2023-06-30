@@ -15,6 +15,15 @@ const Preview: React.FC<PreviewProps> = ({ user, isOpen }) => {
     setIsFollowing(!isFollowing);
   };
 
+  const formatNumber = (number: number) => {
+    if (number > 1000000) {
+      return (number / 1000000).toFixed(0) + 'mill';
+    } else if (number > 10000) {
+      return (number / 1000).toFixed(1) + 'mil';
+    }
+    return number.toString();
+  };
+
   return (
     <div
       className="preview__component"
@@ -32,13 +41,13 @@ const Preview: React.FC<PreviewProps> = ({ user, isOpen }) => {
         <span>{user.userName}</span>
       </div>
       <p className="preview__biographies">{user.biographies}</p>
-      <div>
-        <div>
-          <strong>{user.following}</strong>
+      <div className="preview__botContainer">
+        <div className="preview__followingContainer">
+          <strong>{formatNumber(user.following)}</strong>
           <span>Siguiendo</span>
         </div>
-        <div>
-          <strong>{user.followers}</strong>
+        <div className="preview__followersContainer">
+          <strong>{formatNumber(user.followers)}</strong>
           <span>Seguidores</span>
         </div>
       </div>

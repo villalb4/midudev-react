@@ -48,3 +48,25 @@
   font-size: 15px;
   font-weight: 400;
 }
+
+.preview__botContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+}
+.preview__followingContainer,
+.preview__followersContainer {
+  display: flex;
+  gap: 4px;
+}
+.preview__followingContainer > strong,
+.preview__followersContainer > strong {
+  font-size: 14px;
+  color: #e7e9ea;
+}
+
+.preview__followingContainer > span,
+.preview__followersContainer > span {
+  font-size: 14px;
+  color: #71767b;
+}
