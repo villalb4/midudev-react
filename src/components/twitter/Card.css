@@ -23,6 +23,18 @@
   display: flex;
   flex-direction: column;
 }
+.twCard__namesContainer > strong {
+  color: #e7e9ea;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.twCard__namesContainer > span {
+  color: #71767b;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
 .twButton {
   background-color: transparent;
   border: 1px solid #536471;

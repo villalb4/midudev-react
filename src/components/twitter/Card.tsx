@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({ user }) => {
           <img src={user.profilePhoto} alt="profile photo" />
         </div>
         <div className="twCard__namesContainer">
-          <span>{user.name}</span>
+          <strong>{user.name}</strong>
           <span>{user.userName}</span>
         </div>
       </div>
