@@ -27,11 +27,21 @@ const Preview: React.FC<PreviewProps> = ({ user, isOpen }) => {
         </div>
         <FollowButton handleFollow={handleFollow} isFollowing={isFollowing} />
       </div>
-      <div>
+      <div className="preview__midContainer">
         <strong>{user.name}</strong>
         <span>{user.userName}</span>
       </div>
-      <p>{user.biographies}</p>
+      <p className="preview__biographies">{user.biographies}</p>
+      <div>
+        <div>
+          <strong>{user.following}</strong>
+          <span>Siguiendo</span>
+        </div>
+        <div>
+          <strong>{user.followers}</strong>
+          <span>Seguidores</span>
+        </div>
+      </div>
     </div>
   );
 };

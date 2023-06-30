@@ -24,7 +24,27 @@
   border-radius: 50px;
   overflow: hidden;
 }
-
 .preview__topContainer div:first-child > img {
   width: 100%;
+}
+
+.preview__midContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0px 12px 0px;
+}
+
+.preview__midContainer > strong {
+  font-size: 17px;
+  color: #e7e9ea;
+}
+.preview__midContainer > span {
+  color: #71767b;
+  font-size: 15px;
+  font-weight: 400;
+}
+.preview__biographies {
+  color: #e7e9ea;
+  font-size: 15px;
+  font-weight: 400;
 }
