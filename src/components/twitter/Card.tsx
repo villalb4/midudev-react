@@ -2,6 +2,7 @@ import * as React from 'react';
 import './Card.css';
 import { ITwitterData } from '../../pages/twitter/data';
 import FollowButton from './followButton/FollowButton';
+import Preview from './preview/Preview';
 
 interface CardProps {
   user: ITwitterData;
@@ -9,6 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ user }) => {
   const [isFollowing, setIsFollowing] = React.useState<boolean>(false);
+  const [openPreview, setOpenPreview] = React.useState<boolean>(false);
 
   const handleFollow = () => {
     setIsFollowing(!isFollowing);
@@ -16,8 +18,13 @@ const Card: React.FC<CardProps> = ({ user }) => {
 
   return (
     <div className="twCard__component">
+      {openPreview && <Preview user={user} isOpen={setOpenPreview} />}
       <div className="twCard__firsChild">
-        <div className="twCard__profilePhotoContainer">
+        <div
+          className="twCard__profilePhotoContainer"
+          onMouseEnter={() => setOpenPreview(true)}
+          onMouseLeave={() => setOpenPreview(false)}
+        >
           <img src={user.profilePhoto} alt="profile photo" />
         </div>
         <div className="twCard__namesContainer">

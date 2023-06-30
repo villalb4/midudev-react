@@ -2,6 +2,10 @@ export interface ITwitterData {
   profilePhoto: string;
   name: string;
   userName: string;
+  biographies: string;
+  verified: boolean;
+  following: number;
+  followers: number;
   follow: boolean;
 }
 
